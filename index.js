@@ -76,14 +76,12 @@ const zooAnimals = [
   */
 
  function lowerCaseNames(array){
-  const lowercase = [];
-   const mappedArr = array.map(function(item){
-     lowercase.push(item.animal_name)
-   })
-   return lowercase;
+  
+  const mappedArr = array.map(function(item){
+  return item.animal_name.toLowerCase();
+  })
+  return mappedArr;
   }
-
-  // undefined
 
 
   

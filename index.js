@@ -77,10 +77,10 @@ const zooAnimals = [
 
  function lowerCaseNames(array){
   const lowercase = [];
-  array.map(function(item){
-  lowercase.push(item.name.toLowerCase)
-  })
-  return lowercase;
+   const mappedArr = array.map(function(item){
+     lowercase.push(item.animal_name)
+   })
+   return lowercase;
   }
 
   // undefined
@@ -93,9 +93,12 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(array){
-    array.filter(function(item){
-      return item.population < 5;
+    const lowPop = [];
+    const pop = array.filter(function(item){
+     lowPop.push(item.population < 5);
+     return pop;
     });
+    return lowPop;
   }
   
 
@@ -107,7 +110,7 @@ const zooAnimals = [
 
   function USApop(data){
     const totalPop = data.reduce(function(accum, item){
-      return [accum + item[population]]
+      return accum + item.population;
     },0);
     return totalPop;
   }

@@ -93,12 +93,12 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(array){
-    const lowPop = [];
+   
     const pop = array.filter(function(item){
-     lowPop.push(item.population < 5);
-     return pop;
+     return item.population < 5;
+     
     });
-    return lowPop;
+    return pop;
   }
   
 
